@@ -1,13 +1,21 @@
-function swapTheme() {
-  const app = document.getElementById("app");
-  const button = document.getElementById("swap");
+let button=document.getElementById('swap');
+let body=document.getElementsByTagName('body')
+let main=document.getElementById("app")
 
-  if (app.classList.contains("day")) {
-    app.classList.replace("day", "night");
-    button.classList.replace("button_day", "button_night");
-  } else {
-    app.classList.replace("night", "day");
-    button.classList.replace("button_night", "button_day");
-  }
-	
+function swap(){
+    //body.style.backgroundcolor="dark";
+    // var element = document.body;
+    // element.classList.toggle("dark-mode");
+    if(button.getAttribute("class")==="button_day"){
+    document.body.style.backgroundColor = "dark";
+    button.setAttribute("class", "button_night")
+    main.setAttribute("class","night")
+    }
+    else{
+        document.body.style.backgroundColor = "light";
+        button.setAttribute("class", "button_day")
+        main.setAttribute("class","day") 
+    }
+
+    //console.log("hi")
 }
